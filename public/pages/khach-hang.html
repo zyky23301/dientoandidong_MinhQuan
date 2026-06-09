@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khách hàng - QuanChat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-role="customer">
+    <div class="app-container">
+        <!-- 1. App Nav -->
+        <nav class="app-nav">
+            <a href="#" class="nav-item brand"><i class="bi bi-layers-fill"></i></a>
+            <a href="trang-chu.html" class="nav-item" title="Trang chủ"><i class="bi bi-house-door"></i></a>
+            <a href="#" class="nav-item active" title="Tin nhắn"><i class="bi bi-chat-dots"></i></a>
+            <a href="#" class="nav-item" title="Tài liệu"><i class="bi bi-folder2-open"></i></a>
+            <a href="#" class="nav-item bottom" title="Cài đặt"><i class="bi bi-gear"></i></a>
+        </nav>
+
+        <!-- 2. App Sidebar -->
+        <aside class="app-sidebar">
+            <div class="sidebar-header">
+                <h2>Kênh Giao Tiếp</h2>
+                <div class="search-box">
+                    <i class="bi bi-search"></i>
+                    <input type="text" id="filterText" placeholder="Tìm kiếm nội dung...">
+                </div>
+            </div>
+            <div class="channel-list">
+                <div class="channel-item active">
+                    <div class="channel-avatar bg-aurora-purple"><i class="bi bi-headset"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-name">Hỗ trợ kỹ thuật (Admin)</span>
+                        <span class="channel-desc"><div class="status-dot"></div> Online</span>
+                    </div>
+                </div>
+                <div class="channel-item">
+                    <div class="channel-avatar bg-frost-2"><i class="bi bi-shop"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-name">Phòng Kinh Doanh</span>
+                        <span class="channel-desc">Tư vấn sản phẩm mới</span>
+                    </div>
+                </div>
+                <div class="channel-item">
+                    <div class="channel-avatar" style="background-color: var(--polar-4);"><i class="bi bi-bell-fill"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-name">Thông báo hệ thống</span>
+                        <span class="channel-desc">Bảo trì máy chủ lúc 23:00</span>
+                    </div>
+                </div>
+                <div class="channel-item">
+                    <div class="channel-avatar" style="background-color: var(--aurora-yellow); color: var(--polar-1);"><i class="bi bi-star-fill"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-name">Khách hàng VIP</span>
+                        <span class="channel-desc">Nhóm đặc quyền</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 3. Main Chat Panel -->
+        <main class="app-main">
+            <header class="main-header">
+                <div class="header-title">
+                    <i class="bi bi-hash" style="color:var(--polar-4)"></i> Hỗ trợ kỹ thuật
+                </div>
+                <div class="header-actions">
+                    <i class="bi bi-telephone action-icon"></i>
+                    <i class="bi bi-camera-video action-icon"></i>
+                    <i class="bi bi-trash action-icon danger" id="btnWipeData" title="Xóa lịch sử"></i>
+                </div>
+            </header>
+
+            <div class="messages-area" id="messageBoard">
+                <!-- JS Data -->
+            </div>
+
+            <footer class="main-footer">
+                <i class="bi bi-plus-circle action-icon"></i>
+                <div class="input-box">
+                    <textarea id="txtMessage" rows="1" placeholder="Nhắn tin tới Hỗ trợ kỹ thuật..."></textarea>
+                </div>
+                <button class="btn-send" id="btnSend"><i class="bi bi-send-fill"></i></button>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal-overlay" id="modalEdit">
+        <div class="nord-modal">
+            <h3>Chỉnh sửa nội dung</h3>
+            <textarea id="txtEditContent" rows="3"></textarea>
+            <div class="modal-actions">
+                <button class="btn-nord-secondary" id="btnCancelEdit">Hủy bỏ</button>
+                <button class="btn-nord-primary" id="btnConfirmEdit">Lưu lại</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/chat-logic.js"></script>
+</body>
+</html>

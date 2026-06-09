@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản trị - QuanChat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-role="admin">
+    <div class="app-container">
+        <!-- 1. App Nav -->
+        <nav class="app-nav">
+            <a href="#" class="nav-item brand"><i class="bi bi-layers-fill"></i></a>
+            <a href="trang-chu.html" class="nav-item" title="Trang chủ"><i class="bi bi-house-door"></i></a>
+            <a href="#" class="nav-item active" title="Quản lý Chat"><i class="bi bi-chat-dots"></i></a>
+            <a href="#" class="nav-item" title="Thống kê"><i class="bi bi-graph-up"></i></a>
+            <a href="#" class="nav-item bottom" title="Cài đặt"><i class="bi bi-gear"></i></a>
+        </nav>
+
+        <!-- 2. App Sidebar -->
+        <aside class="app-sidebar">
+            <div class="sidebar-header">
+                <h2>Danh sách chờ</h2>
+                <div class="search-box">
+                    <i class="bi bi-search"></i>
+                    <input type="text" id="filterText" placeholder="Tìm kiếm nội dung...">
+                </div>
+            </div>
+            <div class="channel-list">
+                <div class="channel-item active">
+                    <div class="channel-avatar bg-frost-2"><i class="bi bi-person-fill"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-name">Khách hàng ẩn danh</span>
+                        <span class="channel-desc"><div class="status-dot"></div> Cần hỗ trợ</span>
+                    </div>
+                </div>
+                <div class="channel-item">
+                    <div class="channel-avatar" style="background-color: var(--aurora-purple);"><i class="bi bi-person"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-name">Nguyễn Văn A</span>
+                        <span class="channel-desc">Hỏi về chính sách bảo hành</span>
+                    </div>
+                </div>
+                <div class="channel-item">
+                    <div class="channel-avatar" style="background-color: var(--polar-4);"><i class="bi bi-person"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-name">Trần Thị B</span>
+                        <span class="channel-desc">Cảm ơn shop nhiều ạ!</span>
+                    </div>
+                </div>
+                <div class="channel-item">
+                    <div class="channel-avatar" style="background-color: var(--aurora-yellow); color: var(--polar-1);"><i class="bi bi-building"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-name">Công ty TNHH XYZ</span>
+                        <span class="channel-desc">Yêu cầu báo giá lô hàng</span>
+                    </div>
+                </div>
+                <div class="channel-item">
+                    <div class="channel-avatar" style="background-color: var(--aurora-red);"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-name">Lê Văn C</span>
+                        <span class="channel-desc">Khiếu nại dịch vụ...</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 3. Main Chat Panel -->
+        <main class="app-main">
+            <header class="main-header">
+                <div class="header-title">
+                    <i class="bi bi-person-bounding-box" style="color:var(--polar-4)"></i> Phục vụ: Khách hàng ẩn danh
+                </div>
+                <div class="header-actions">
+                    <i class="bi bi-check-circle action-icon" title="Đánh dấu đã giải quyết"></i>
+                    <i class="bi bi-trash action-icon danger" id="btnWipeData" title="Xóa lịch sử"></i>
+                </div>
+            </header>
+
+            <div class="messages-area" id="messageBoard">
+                <!-- JS Data -->
+            </div>
+
+            <footer class="main-footer">
+                <i class="bi bi-paperclip action-icon"></i>
+                <div class="input-box">
+                    <textarea id="txtMessage" rows="1" placeholder="Nhắn tin trả lời khách hàng..."></textarea>
+                </div>
+                <button class="btn-send" id="btnSend"><i class="bi bi-send-fill"></i></button>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal-overlay" id="modalEdit">
+        <div class="nord-modal">
+            <h3>Sửa tin nhắn phản hồi</h3>
+            <textarea id="txtEditContent" rows="3"></textarea>
+            <div class="modal-actions">
+                <button class="btn-nord-secondary" id="btnCancelEdit">Hủy bỏ</button>
+                <button class="btn-nord-primary" id="btnConfirmEdit">Lưu lại</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/chat-logic.js"></script>
+</body>
+</html>
