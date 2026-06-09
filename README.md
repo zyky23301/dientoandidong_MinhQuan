@@ -1,7 +1,7 @@
 # Hệ thống QuanChat (QuanChat System)
 **Đồ án môn học: Điện toán di động**  
 **Sinh viên thực hiện:** Nguyễn Minh Quân  
-QuanChat System là một nền tảng giao tiếp trực tuyến nội bộ (ứng dụng Chat) được thiết kế theo mô hình Client-Server. Giao diện được lấy cảm hứng từ các phần mềm chuyên nghiệp với phong cách thiết kế hiện đại **Nord Theme** (tràn viền 100vw/100vh), cung cấp trải nghiệm tối giản, trực quan và dịu mắt.
+## 🧐 QuanChat System là một nền tảng giao tiếp trực tuyến nội bộ (ứng dụng Chat) được thiết kế theo mô hình Client-Server. Giao diện được lấy cảm hứng từ các phần mềm chuyên nghiệp với phong cách thiết kế hiện đại **Nord 
 ---
 ## 🚀 Các tính năng chính
 - **Giao diện đẳng cấp (Premium UI)**: Thiết kế Nord Theme tinh tế kết hợp cấu trúc 3 cột tràn viền (Icon Nav, Danh sách Kênh, Khung Chat) hoàn toàn đáp ứng các tiêu chuẩn thẩm mỹ hiện đại.
